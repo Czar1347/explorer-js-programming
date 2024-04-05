@@ -30,19 +30,38 @@ while (option != 3) {
       3. Sair do programa
       `)
   );
-  
-  if (option == 1) {
-    let item = prompt("Digite o nome do item")
-    items.push(item);
-  } else if (option == 2) {
-    if (items.length == 0) {
-      alert("Não existem items cadastrados");
-    } else {
-      alert(items);
-    }
-  } else {
-    alert(Tchau);
+
+  switch (option) {
+    case 1:
+      let item = prompt("Digite o nome do item");
+      items.push(item);
+      break;
+    case 2:
+      if (items.length == 0) {
+        alert("Não existem items cadastrados");
+      } else {
+        alert(items);
+      }
+      break;
+    case 3:
+      alert(`tchau`)
+      break;
+    default: 
+      alert(`Opção inválida. Tente novamente`)
   }
+
+  // if (option == 1) {
+  //   let item = prompt("Digite o nome do item")
+  //   items.push(item);
+  // } else if (option == 2) {
+  //   if (items.length == 0) {
+  //     alert("Não existem items cadastrados");
+  //   } else {
+  //     alert(items);
+  //   }
+  // } else {
+  //   alert(Tchau);
+  // }
 
   console.log(option, items);
 }
