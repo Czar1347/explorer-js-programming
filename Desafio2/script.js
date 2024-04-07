@@ -26,12 +26,8 @@ for( let student of students){
     let grade2 = student.secondGrade
 
     let media = calcMedia(grade1,grade2)
-    let result = media > 7
+    let result = media > 7 ? `Parabens, ${student.name}! Você foi aprovado(a) no concurso!` : `Não foi dessa vez, ${student.name}! Tente novamente!`
 
-    if(result){
-        alert(`A média do(a) aluno(a) ${student.name} é: ${media}\nParabens, ${student.name}! Você foi aprovado(a) no concurso!`)
-    }else{
-        alert(`A média do(a) aluno(a) ${student.name} é: ${media}\nNão foi dessa vez, ${student.name}! Tente novamente!`)
-    }
+    alert(`A média do(a) aluno(a) ${student.name} é: ${media}\n${result}`)
 
 }
